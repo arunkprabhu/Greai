@@ -1,3 +1,3 @@
-<h1>How to work? </h1>
+# How to work?
 
-<img src="./public/1.png" alt='image />
+![image](./public/1.png)
