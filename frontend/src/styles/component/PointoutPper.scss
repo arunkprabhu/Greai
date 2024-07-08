@@ -1,0 +1,20 @@
+@use "../Abstracts/mixin" as *;
+@use "../Abstracts/variables" as *;
+
+.pointout-paper {
+  width: 800px;
+  height: auto;
+  min-height: 450px;
+  position: relative;
+  .pointer {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 20px solid white;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -20px;
+  }
+}

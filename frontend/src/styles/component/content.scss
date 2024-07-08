@@ -1,0 +1,61 @@
+@use "../Abstracts/mixin" as *;
+@use "../Abstracts/variables" as *;
+
+.content {
+  flex: 0.9;
+  @include flex(column, inherit, inherit, 1);
+  .sub-content {
+    width: 95%;
+    margin-inline: auto;
+    padding-block: 5px;
+    @include flex(column, inherit, inherit, 1);
+    .toolbar {
+      @include flex(column, inherit, inherit, 0.3);
+
+      .eye-icon-container {
+        width: 100%;
+        @include flex(row, center, flex-end, 1);
+        padding-block: 5px;
+
+        img {
+          width: 30px;
+          height: 18px;
+        }
+      }
+      .search-container {
+        @include flex(column, center, flex-start, 1);
+        .searchbox {
+          h5 {
+            color: grey;
+            margin-block: 5px;
+            b {
+              color: $text-color;
+            }
+          }
+        }
+        .common-input {
+          height: 40px;
+          outline: none;
+          padding-left: 5px;
+          border-radius: 10px;
+          border: none;
+          box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+          margin-block: 5px;
+          &.sm {
+            width: 250px;
+          }
+
+          &.md {
+            width: 350px;
+          }
+          &.lg {
+            width: 450px;
+          }
+          &.xl {
+            width: 750px;
+          }
+        }
+      }
+    }
+  }
+}

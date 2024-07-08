@@ -1,0 +1,24 @@
+@use "../Abstracts/mixin" as *;
+@use "../Abstracts/variables" as *;
+.header {
+  @include header-footer();
+  .sub-header {
+    width: 95%;
+    height: 100%;
+    margin-inline: auto;
+    @include flex(row, center, space-between, 0);
+
+    .menu-icon {
+      font-size: 25px;
+    }
+  }
+  .logo-container {
+    width: 110px;
+    height: 40px;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

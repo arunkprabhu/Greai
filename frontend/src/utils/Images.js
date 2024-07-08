@@ -1,0 +1,27 @@
+import home from "../assets/images/home.png";
+import call from "../assets/images/call.png";
+import callPause from "../assets/images/call_pause.png";
+import profile from "../assets/images/profile.png";
+import eye from "../assets/images/eye.png";
+import eye_lock from "../assets/images/eye_lock.png";
+import like from "../assets/images/like.png";
+import dislike from "../assets/images/dislike.png";
+import logo from "../assets/images/logo.png";
+import profile_white from "../assets/images/profile_white.png";
+import call_pause_white from "../assets/images/call_pause_white.png";
+import call_white from "../assets/images/call_white.png";
+import home_white from "../assets/images/home_white.png";
+
+export const HOME_ICON = home;
+export const CALL_ICON = call;
+export const CALL_PAUSE_ICON = callPause;
+export const PROFILE_ICON = profile;
+export const EYE_ICON = eye;
+export const EYE_LOCK_ICON = eye_lock;
+export const LIKE_ICON = like;
+export const DISLIKE_ICON = dislike;
+export const LOGO = logo;
+export const PROFILE_WHITE = profile_white;
+export const CALL_WHITE = call_white;
+export const CALL_PAUSE_WHITE = call_pause_white;
+export const HOME_WHITE = home_white;

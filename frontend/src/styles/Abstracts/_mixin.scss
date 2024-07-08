@@ -1,0 +1,24 @@
+@use "./variables" as *;
+
+@mixin flex($direction: row, $align: center, $justify: center, $flex) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+  flex-direction: $direction;
+  flex: $flex;
+}
+
+@mixin line($color, $left: 0) {
+  position: absolute;
+  width: 40px;
+  background-color: $color;
+  height: 1px;
+  left: $left;
+}
+
+@mixin header-footer() {
+  width: 100%;
+  height: 60px;
+  background-color: $secondary;
+  flex: 0.05;
+}
