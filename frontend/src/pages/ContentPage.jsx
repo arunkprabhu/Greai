@@ -1,5 +1,3 @@
-import React from "react";
-import PropTypes from "prop-types";
 import "../styles/component/content.scss";
 import ProgressBar from "../components/ProgressBar";
 import { progressData } from "../services/data/progressData";

@@ -22,3 +22,12 @@
   background-color: $secondary;
   flex: 0.05;
 }
+@mixin ratin-emoji($color) {
+  width: 30px;
+  height: 30px;
+  color: $color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 5px solid $color;
+}

@@ -2,10 +2,13 @@
 @use "../Abstracts/variables" as *;
 
 .pointout-paper {
-  width: 800px;
-  height: auto;
-  min-height: 450px;
-  position: relative;
+  width: 550px;
+  height: 400px;
+  background-color: #ffffff;
+  position: absolute;
+  top: 80px;
+  border-radius: 20px;
+
   .pointer {
     width: 0;
     height: 0;
@@ -15,6 +18,56 @@
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    top: -20px;
+    top: -14px;
+  }
+  .subContainer {
+    width: 100%;
+    padding-block: 10px;
+    height: 100%;
+    @include flex(column, inherit, space-between, 1);
+    .detail-container {
+      padding-bottom: 15px;
+    }
+    .fluid {
+      width: 90%;
+      margin-inline: auto;
+      overflow-y: auto;
+      flex: 0.9;
+      height: 400px;
+    }
+
+    .transcription-container {
+      padding-bottom: 15px;
+      .transcription {
+        @include flex(row, center, inherit, 0);
+        cursor: pointer;
+        h5 {
+          margin-right: 15px;
+          margin-block: 6px;
+        }
+        img {
+          width: 25px;
+          height: 14px;
+        }
+      }
+      h6 {
+        color: grey;
+        font-size: 13px;
+        margin-left: 3px;
+      }
+    }
+    .transcription-sub {
+      @include flex(row, inherit, inherit, 1);
+      padding-block: 10px;
+      &.remove {
+        display: none;
+      }
+      .chat-container {
+        @include flex(column, inherit, inherit, 0.5);
+      }
+      .option-container {
+        @include flex(column, center, center, 0.5);
+      }
+    }
   }
 }

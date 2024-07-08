@@ -1,4 +1,3 @@
-import PropTypes from "prop-types";
 import { EYE_ICON, EYE_LOCK_ICON } from "../utils/Images";
 import { useDispatch, useSelector } from "react-redux";
 import { updateIsProgressOpen } from "../services/redux/slices/GreaiReducer";

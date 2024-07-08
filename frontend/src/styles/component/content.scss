@@ -4,13 +4,14 @@
 .content {
   flex: 0.9;
   @include flex(column, inherit, inherit, 1);
+  height: auto;
   .sub-content {
     width: 95%;
     margin-inline: auto;
     padding-block: 5px;
     @include flex(column, inherit, inherit, 1);
     .toolbar {
-      @include flex(column, inherit, inherit, 0.3);
+      @include flex(column, inherit, inherit, 0.1);
 
       .eye-icon-container {
         width: 100%;
@@ -18,8 +19,8 @@
         padding-block: 5px;
 
         img {
-          width: 30px;
-          height: 18px;
+          width: 25px;
+          height: 14px;
         }
       }
       .search-container {
@@ -56,6 +57,29 @@
           }
         }
       }
+    }
+  }
+  .common-button {
+    height: 30px;
+    padding-left: 5px;
+    border-radius: 10px;
+    border: 2px solid $primary;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    color: $primary;
+    margin-block: 5px;
+    background-color: $secondary;
+    &.sm {
+      width: 200px;
+    }
+
+    &.md {
+      width: 350px;
+    }
+    &.lg {
+      width: 450px;
+    }
+    &.xl {
+      width: 750px;
     }
   }
 }

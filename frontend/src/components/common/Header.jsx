@@ -1,4 +1,3 @@
-import React from "react";
 import "../../styles/component/header.scss";
 import { LOGO } from "../../utils/Images";
 import { MdMenu } from "react-icons/md";

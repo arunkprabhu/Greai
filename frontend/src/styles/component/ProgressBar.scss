@@ -2,25 +2,31 @@
 @use "../Abstracts/variables" as *;
 
 .progress-bar {
-  @include flex(row, flex-start, center, 0.6);
+  padding-top: 55px;
+  @include flex(row, flex-start, center, 0.7);
   .progress-bar-container {
-    width: 142px;
+    width: 130px;
 
     .progress-round {
-      width: 60px;
-      height: 60px;
+      width: 50px;
+      height: 50px;
       background-color: $secondary;
-      border-radius: 60px;
-      border: solid 1px $primary;
+      border-radius: 50px;
+      z-index: 2;
+      border: solid 1.5px $primary;
       box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
       @include flex(row, center, center, 0);
       position: relative;
+      &.loading {
+        border: solid 1.5px #a1ccee;
+      }
+
       &.isAcitive {
         background-color: $primary;
       }
       .progress-icon {
-        height: 30px;
-        width: 30px;
+        height: 20px;
+        width: 20px;
 
         img {
           width: 100%;
@@ -30,19 +36,122 @@
 
       .left-line {
         @include line($primary, -42px);
+        &.loading {
+          background-color: #a1ccee;
+        }
       }
       .right-line {
-        @include line($primary, 60px);
+        @include line($primary, 50px);
+        &.loading {
+          background-color: #a1ccee;
+        }
       }
       .label-containaer {
         position: absolute;
         top: 7px;
-        left: 80px;
+        left: 70px;
 
         label {
           display: block;
           width: 60px;
+          font-size: 12px;
+          font-weight: 700;
+          color: gray;
+        }
+      }
+      .wrapper {
+        height: 100%;
+        margin-top: 10px;
+        display: flex;
+        .paragraph {
           font-size: 13px;
+          padding-block: 15px;
+          width: 85%;
+          font-weight: 500;
+          color: gray;
+        }
+        .checkbox-container {
+          @include flex(row, center, none, 0);
+          label {
+            font-size: 13px;
+            margin-left: 5px;
+          }
+        }
+      }
+      .client-container {
+        background-color: $primary-light;
+        height: 135px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        overflow: hidden;
+        padding-bottom: 10px;
+        @include flex(row, inherit, inherit, 0.6);
+        .rating-container {
+          background-color: $primary-light;
+          padding-block: 15px;
+          padding-inline: 15px;
+          h5 {
+            color: gray;
+          }
+          @include flex(column, inherit, inherit, 0.5);
+          .client-icon {
+            width: 35px;
+            height: 35px;
+            background-color: $primary;
+            border-radius: 35px;
+            @include flex(row, center, center, inherit);
+            img {
+              width: 25px;
+              height: 25px;
+            }
+          }
+
+          .rating {
+            @include flex(row, inherit, inherit, 0);
+            position: relative;
+            width: 160px;
+            height: 50px;
+            margin-left: 10px;
+            cursor: pointer;
+            .add {
+              position: absolute;
+              bottom: 10px;
+              right: -13px;
+              font-size: 20px;
+              color: #3b934b;
+            }
+            .minus {
+              position: absolute;
+              bottom: 9px;
+              left: -11px;
+              font-size: 25px;
+              color: #da4838;
+            }
+            .transparent {
+              opacity: 0.2;
+            }
+            .level1 {
+              @include ratin-emoji(#da4838);
+            }
+            .level2 {
+              @include ratin-emoji(#f27826);
+            }
+            .level3 {
+              @include ratin-emoji(#ce9925);
+            }
+            .level4 {
+              @include ratin-emoji(#82cf9d);
+            }
+            .level5 {
+              @include ratin-emoji(#3b934b);
+            }
+          }
+        }
+        .feedback-container {
+          background-color: #f3fbff;
+          padding-block: 15px;
+          padding-inline: 15px;
+          @include flex(column, inherit, inherit, 0.5);
         }
       }
     }
